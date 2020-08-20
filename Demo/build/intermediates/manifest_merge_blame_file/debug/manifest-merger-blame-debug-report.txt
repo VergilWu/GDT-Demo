@@ -1,0 +1,1082 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.qq.e.union.demo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml
+10
+11    <!-- 相关权限声明 : SDK不强制校验下列权限（即:无下面权限sdk也可正常工作），但建议开发者申请下面权限，尤其是READ_PHONE_STATE权限 -->
+12    <!-- READ_PHONE_STATE权限用于允许SDK获取用户标识,针对单媒体的用户，允许获取权限的，投放定向广告；不允许获取权限的用户，投放通投广告，媒体可以选择是否把用户标识数据提供给优量汇，并承担相应广告填充和eCPM单价下降损失的结果。 -->
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:8:5-75
+13-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:9:22-78
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 如果需要精确定位的话请加上此权限 -->
+15-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:10:5-79
+15-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:10:22-76
+16
+17
+18    <!-- mintegral 简称mtg，此处配置作用于流量分配功能，关于流量分配，详情请咨询商务 -->
+19    <!-- mtg所需要的权限，此处因为优量汇SDK已经有相关权限了，此处注释以做提醒 -->
+20    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+21    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+22    <!-- 如果国内流量版本SDK ，以下两条权限必须加上 -->
+23    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+24    <!-- <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> -->
+25    <!-- mtg需要权限结束 -->
+26
+27
+28    <!-- 快手SDK所需相关权限，存储权限，此处配置作用于流量分配功能，关于流量分配，详情请咨询商务 -->
+29    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:22:5-80
+29-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:22:22-77
+30    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+30-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:23:5-81
+30-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:23:22-78
+31    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+31-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:11:5-83
+31-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:11:22-80
+32    <uses-permission android:name="android.permission.INTERNET" />
+32-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:12:5-67
+32-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:12:22-64
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:13:5-79
+33-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:13:22-76
+34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+34-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:14:5-76
+34-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:14:22-73
+35
+36    <permission
+36-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:11:5-13:47
+37        android:name="com.qq.e.union.demo.permission.KW_SDK_BROADCAST"
+37-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:12:9-68
+38        android:protectionLevel="signature" />
+38-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:13:9-44
+39
+40    <uses-permission android:name="com.qq.e.union.demo.permission.KW_SDK_BROADCAST" /> <!-- 快手需要权限结束 -->
+40-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:17:5-84
+40-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:17:22-81
+41    <application
+41-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:26:5-419:19
+42        android:name="com.qq.e.union.demo.DemoApplication"
+42-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:27:9-40
+43        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+43-->[com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\dd1cf78f22bdd94f550130b281f27c97\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+44        android:debuggable="true"
+45        android:icon="@drawable/gdticon"
+45-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:28:9-41
+46        android:label="广点通TBS Demo"
+46-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:30:9-36
+47        android:networkSecurityConfig="@xml/network_security_config"
+47-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:32:9-69
+48        android:testOnly="true"
+49        android:theme="@style/AppTheme"
+49-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:31:9-40
+50        android:usesCleartextTraffic="true" >
+50-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:16:18-53
+51
+52        <!-- mtg所需要依赖，此处配置作用于流量分配功能，关于流量分配功能，详情请咨询商务 -->
+53        <uses-library
+53-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:34:9-36:40
+54            android:name="org.apache.http.legacy"
+54-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:35:13-50
+55            android:required="false" />
+55-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:36:13-37
+56        <!-- mtg所需要依赖结束 -->
+57        <!-- targetSDKVersion >= 24时才需要添加这个provider。provider的authorities属性的值为${applicationId}.fileprovider，请开发者根据自己的${applicationId}来设置这个值，例如本例中applicationId为"com.qq.e.union.demo"。 -->
+58        <provider
+59            android:name="android.support.v4.content.FileProvider"
+59-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:40:13-67
+60            android:authorities="com.qq.e.union.demo.fileprovider"
+60-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:41:13-64
+61            android:exported="false"
+61-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:42:13-37
+62            android:grantUriPermissions="true" >
+62-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:43:13-47
+63            <meta-data
+63-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:44:13-46:57
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:45:17-67
+65                android:resource="@xml/gdt_file_path" />
+65-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:46:17-54
+66        </provider>
+67
+68        <!-- 此处配置作用于流量分配功能. 如果接入 Google 广告(使用 Admob 包下的任何一个 Adapter ,即接入 Google 广告)，请务必添加 meta-data ，否则不能正常初始化  异常:java.lang.IllegalStateException -->
+69        <meta-data
+69-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:50:9-52:70
+70            android:name="com.google.android.gms.ads.APPLICATION_ID"
+70-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:51:13-69
+71            android:value="ca-app-pub-3940256099942544~3347511713" />
+71-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:52:13-67
+72        <!-- Admob SDK Manifest相关配置到此结束 -->
+73
+74
+75        <!-- 声明该Demo中的组件 -->
+76        <activity
+76-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:56:9-67:20
+77            android:name="com.qq.e.union.demo.DemoListActivity"
+77-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:57:13-45
+78            android:exported="true"
+78-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:58:13-36
+79            android:label="@string/title_activity_maindemo"
+79-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:59:13-60
+80            android:launchMode="singleTask"
+80-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:60:13-44
+81            android:screenOrientation="portrait"
+81-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:61:13-49
+82            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+82-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:62:13-72
+83            <intent-filter>
+83-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:63:13-66:29
+84                <action android:name="android.intent.action.VIEW" />
+84-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:64:17-69
+84-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:64:25-66
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+86-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+86-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+87            </intent-filter>
+88        </activity>
+89        <activity
+89-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:68:9-70:75
+90            android:name="com.qq.e.union.demo.SDKVersionActivity"
+90-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:68:19-53
+91            android:screenOrientation="portrait"
+91-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:69:13-49
+92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+92-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:70:13-72
+93        <activity
+93-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:71:9-81:20
+94            android:name="com.qq.e.union.demo.SplashActivity"
+94-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:72:13-43
+95            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+95-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:73:13-83
+96            android:screenOrientation="portrait"
+96-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:74:13-49
+97            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+97-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:75:13-71
+98            android:windowSoftInputMode="stateHidden" >
+98-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:76:13-54
+99            <intent-filter>
+99-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:77:13-80:29
+100                <action android:name="android.intent.action.MAIN" />
+100-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:78:17-69
+100-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:78:25-66
+101
+102                <category android:name="android.intent.category.LAUNCHER" />
+102-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:79:17-77
+102-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:79:27-74
+103            </intent-filter>
+104        </activity>
+105        <activity
+105-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:82:9-100:20
+106            android:name="com.qq.e.union.demo.SplashADActivity"
+106-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:83:13-45
+107            android:screenOrientation="portrait" >
+107-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:84:13-49
+108            <intent-filter>
+108-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:85:13-89:29
+109                <action android:name="gdt.action.LAUNCH_DEMO" />
+109-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:86:17-65
+109-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:86:25-62
+110
+111                <category android:name="android.intent.category.DEFAULT" />
+111-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+111-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+112            </intent-filter>
+113
+114            <meta-data
+114-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+115                android:name="id"
+115-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+116                android:value="@string/splash" />
+116-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+117            <meta-data
+117-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+118                android:name="content"
+118-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+119                android:value="开屏广告接入示例" />
+119-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+120            <meta-data
+120-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+121                android:name="action"
+121-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+122                android:value="gdt.action.LAUNCH_DEMO" />
+122-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+123        </activity>
+124        <activity
+124-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:101:9-104:75
+125            android:name="com.qq.e.union.demo.DeviceInfoActivity"
+125-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:102:13-47
+126            android:label="@string/title_activity_device_info"
+126-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:103:13-63
+127            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+127-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:104:13-72
+128        <activity
+128-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:105:9-108:74
+129            android:name="com.qq.e.union.demo.adapter.test.activity.MediationTestActivity"
+129-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:106:13-72
+130            android:label="@string/title_activity_test_mediation"
+130-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:107:13-66
+131            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+131-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:108:13-72
+132        <activity
+132-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:109:9-129:20
+133            android:name="com.qq.e.union.demo.NativeADActivity"
+133-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:110:13-45
+134            android:label="@string/title_nativead"
+134-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:111:13-51
+135            android:screenOrientation="portrait"
+135-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:112:13-49
+136            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+136-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:113:13-72
+137            <meta-data
+137-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+138                android:name="id"
+138-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+139                android:value="@string/nativeSelf" />
+139-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+140            <meta-data
+140-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+141                android:name="content"
+141-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+142                android:value="原生广告(自渲染)接入示例" />
+142-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+143            <meta-data
+143-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+144                android:name="action"
+144-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+145                android:value="gdt.action.NATIVE_SELF_DEMO" />
+145-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+146
+147            <intent-filter>
+147-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:124:13-128:29
+148                <action android:name="gdt.action.NATIVE_SELF_DEMO" />
+148-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:125:17-70
+148-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:125:25-67
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+150-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+151            </intent-filter>
+152        </activity>
+153        <activity
+153-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:130:9-151:20
+154            android:name="com.qq.e.union.demo.MultiProcessNativeADActivity"
+154-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:131:13-57
+155            android:label="@string/title_nativead"
+155-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:132:13-51
+156            android:process=":nativead"
+156-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:133:13-40
+157            android:screenOrientation="portrait"
+157-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:134:13-49
+158            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+158-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:135:13-72
+159            <meta-data
+159-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+160                android:name="id"
+160-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+161                android:value="@string/nativeSelfMp" />
+161-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+162            <meta-data
+162-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+163                android:name="content"
+163-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+164                android:value="原生广告(自渲染)接入示例(多进程)" />
+164-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+165            <meta-data
+165-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+166                android:name="action"
+166-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+167                android:value="gdt.action.NATIVE_SELF_MP_DEMO" />
+167-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+168
+169            <intent-filter>
+169-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:146:13-150:29
+170                <action android:name="gdt.action.NATIVE_SELF_MP_DEMO" />
+170-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:147:17-73
+170-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:147:25-70
+171
+172                <category android:name="android.intent.category.DEFAULT" />
+172-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+172-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+173            </intent-filter>
+174        </activity>
+175        <activity
+175-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:152:9-155:52
+176            android:name="com.qq.e.union.demo.NativeVideoListDemoActivity"
+176-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:153:13-56
+177            android:label="@string/title_activity_gdtnative_video_ad"
+177-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:154:13-70
+178            android:screenOrientation="portrait" />
+178-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:155:13-49
+179        <activity
+179-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:156:9-159:52
+180            android:name="com.qq.e.union.demo.NativeVideoDemoActivity"
+180-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:157:13-52
+181            android:label="@string/title_activity_native_video_demo"
+181-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:158:13-69
+182            android:screenOrientation="portrait" />
+182-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:159:13-49
+183        <activity
+183-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:160:9-180:20
+184            android:name="com.qq.e.union.demo.NativeVideoADActivity"
+184-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:161:13-50
+185            android:label="@string/title_activity_native_video_ad"
+185-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:162:13-67
+186            android:screenOrientation="portrait"
+186-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:163:13-49
+187            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+187-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:164:13-72
+188            <meta-data
+188-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+189                android:name="id"
+189-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+190                android:value="@string/nativeVideo" />
+190-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+191            <meta-data
+191-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+192                android:name="content"
+192-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+193                android:value="原生视频广告(自渲染)接入示例" />
+193-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+194            <meta-data
+194-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+195                android:name="action"
+195-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+196                android:value="gdt.action.NATIVE_VIDEO_DEMO" />
+196-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+197
+198            <intent-filter>
+198-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:175:13-179:29
+199                <action android:name="gdt.action.NATIVE_VIDEO_DEMO" />
+199-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:176:17-71
+199-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:176:25-68
+200
+201                <category android:name="android.intent.category.DEFAULT" />
+201-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+201-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+202            </intent-filter>
+203        </activity>
+204        <activity
+204-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:181:9-184:52
+205            android:name="com.qq.e.union.demo.NativeVideoRecyclerViewActivity"
+205-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:182:13-60
+206            android:label="@string/title_activity_native_video_recycler_view"
+206-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:183:13-78
+207            android:screenOrientation="portrait" />
+207-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:184:13-49
+208        <activity
+208-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:185:9-189:63
+209            android:name="com.qq.e.union.demo.NativeVideoScrollViewActivity"
+209-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:186:13-58
+210            android:label="@string/title_activity_native_video_scroll_view"
+210-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:187:13-76
+211            android:screenOrientation="portrait"
+211-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:188:13-49
+212            android:theme="@android:style/Theme.NoTitleBar" />
+212-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:189:13-60
+213        <activity
+213-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:190:9-194:63
+214            android:name="com.qq.e.union.demo.NativeVideoPreMovieActivity"
+214-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:191:13-56
+215            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+215-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:192:13-83
+216            android:label="@string/title_activity_native_video_pre_movie"
+216-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:193:13-74
+217            android:theme="@android:style/Theme.NoTitleBar" />
+217-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:194:13-60
+218        <activity
+218-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:195:9-215:20
+219            android:name="com.qq.e.union.demo.NativeExpressADActivity"
+219-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:196:13-52
+220            android:label="@string/title_activity_native_express_ad"
+220-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:197:13-69
+221            android:screenOrientation="portrait"
+221-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:198:13-49
+222            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+222-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:199:13-72
+223            <meta-data
+223-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+224                android:name="id"
+224-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+225                android:value="@string/nativeExpress" />
+225-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+226            <meta-data
+226-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+227                android:name="content"
+227-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+228                android:value="原生广告(模板渲染)接入示例" />
+228-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+229            <meta-data
+229-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+230                android:name="action"
+230-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+231                android:value="gdt.action.NATIVE_EXPRESS_DEMO" />
+231-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+232
+233            <intent-filter>
+233-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:210:13-214:29
+234                <action android:name="gdt.action.NATIVE_EXPRESS_DEMO" />
+234-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:211:17-73
+234-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:211:25-70
+235
+236                <category android:name="android.intent.category.DEFAULT" />
+236-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+236-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+237            </intent-filter>
+238        </activity>
+239        <activity
+239-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:216:9-221:57
+240            android:name="com.qq.e.union.demo.NativeExpressDemoActivity"
+240-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:217:13-54
+241            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+241-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:218:13-83
+242            android:label="@string/title_activity_native_express_demo"
+242-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:219:13-71
+243            android:screenOrientation="portrait"
+243-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:220:13-49
+244            android:windowSoftInputMode="stateHidden" />
+244-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:221:13-54
+245        <activity
+245-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:222:9-226:52
+246            android:name="com.qq.e.union.demo.NativeExpressRecyclerViewActivity"
+246-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:223:13-62
+247            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+247-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:224:13-83
+248            android:label="@string/title_activity_native_express_recycler_view"
+248-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:225:13-80
+249            android:screenOrientation="portrait" />
+249-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:226:13-49
+250        <activity
+250-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:227:9-248:20
+251            android:name="com.qq.e.union.demo.NativeADUnifiedActivity"
+251-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:228:13-52
+252            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+252-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:229:13-83
+253            android:label="@string/title_activity_native_unified_demo"
+253-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:230:13-71
+254            android:screenOrientation="portrait"
+254-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:231:13-49
+255            android:windowSoftInputMode="stateHidden" >
+255-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:232:13-54
+256            <meta-data
+256-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+257                android:name="id"
+257-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+258                android:value="@string/nativeContainer" />
+258-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+259            <meta-data
+259-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+260                android:name="content"
+260-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+261                android:value="自渲染 2.0接入示例" />
+261-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+262            <meta-data
+262-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+263                android:name="action"
+263-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+264                android:value="gdt.action.NATIVE_CONTAINER" />
+264-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+265
+266            <intent-filter>
+266-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:243:13-247:29
+267                <action android:name="gdt.action.NATIVE_CONTAINER" />
+267-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:244:17-70
+267-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:244:25-67
+268
+269                <category android:name="android.intent.category.DEFAULT" />
+269-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+269-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+270            </intent-filter>
+271        </activity>
+272        <activity
+272-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:249:9-252:74
+273            android:name="com.qq.e.union.demo.NativeADUnifiedSampleActivity"
+273-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:250:13-58
+274            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+274-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:251:13-83
+275            android:label="@string/title_activity_native_unified_demo" />
+275-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:252:13-71
+276        <activity
+276-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:253:9-257:52
+277            android:name="com.qq.e.union.demo.NativeADUnifiedListViewActivity"
+277-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:254:13-60
+278            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+278-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:255:13-83
+279            android:label="@string/title_activity_native_unified_demo"
+279-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:256:13-71
+280            android:screenOrientation="portrait" />
+280-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:257:13-49
+281        <activity
+281-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:258:9-262:52
+282            android:name="com.qq.e.union.demo.NativeADUnifiedRecyclerViewActivity"
+282-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:259:13-64
+283            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+283-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:260:13-83
+284            android:label="@string/title_activity_native_unified_demo"
+284-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:261:13-71
+285            android:screenOrientation="portrait" />
+285-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:262:13-49
+286        <activity
+286-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:263:9-266:74
+287            android:name="com.qq.e.union.demo.NativeADUnifiedPreMovieActivity"
+287-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:264:13-60
+288            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+288-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:265:13-83
+289            android:label="@string/title_activity_native_unified_demo" />
+289-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:266:13-71
+290        <activity
+290-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:267:9-272:62
+291            android:name="com.qq.e.union.demo.NativeADUnifiedFullScreenActivity"
+291-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:268:13-62
+292            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+292-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:269:13-83
+293            android:label="@string/title_activity_native_unified_demo"
+293-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:270:13-71
+294            android:screenOrientation="portrait"
+294-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:271:13-49
+295            android:theme="@android:style/Theme.NoTitleBar" />
+295-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:272:13-60
+296        <activity
+296-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:273:9-278:62
+297            android:name="com.qq.e.union.demo.NativeADUnifiedFullScreenFeedActivity"
+297-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:274:13-66
+298            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+298-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:275:13-83
+299            android:label="@string/title_activity_native_unified_demo"
+299-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:276:13-71
+300            android:screenOrientation="portrait"
+300-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:277:13-49
+301            android:theme="@android:style/Theme.NoTitleBar" />
+301-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:278:13-60
+302        <activity
+302-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:279:9-299:20
+303            android:name="com.qq.e.union.demo.ContentADActivity"
+303-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:280:13-46
+304            android:label="@string/title_contentad"
+304-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:281:13-52
+305            android:screenOrientation="portrait"
+305-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:282:13-49
+306            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+306-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:283:13-72
+307            <meta-data
+307-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+308                android:name="id"
+308-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+309                android:value="@string/content" />
+309-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+310            <meta-data
+310-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+311                android:name="content"
+311-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+312                android:value="内容+广告接入示例" />
+312-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+313            <meta-data
+313-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+314                android:name="action"
+314-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+315                android:value="gdt.action.CONTENT_DEMO" />
+315-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+316
+317            <intent-filter>
+317-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:294:13-298:29
+318                <action android:name="gdt.action.CONTENT_DEMO" />
+318-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:295:17-66
+318-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:295:25-63
+319
+320                <category android:name="android.intent.category.DEFAULT" />
+320-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+320-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+321            </intent-filter>
+322        </activity>
+323        <activity
+323-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:300:9-321:20
+324            android:name="com.qq.e.union.demo.RewardVideoActivity"
+324-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:301:13-48
+325            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+325-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:302:13-83
+326            android:label="@string/title_reward_video"
+326-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:303:13-55
+327            android:screenOrientation="portrait"
+327-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:304:13-49
+328            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+328-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:305:13-72
+329            <meta-data
+329-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+330                android:name="id"
+330-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+331                android:value="@string/rewardVideo" />
+331-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+332            <meta-data
+332-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+333                android:name="content"
+333-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+334                android:value="激励视频广告接入示例" />
+334-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+335            <meta-data
+335-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+336                android:name="action"
+336-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+337                android:value="gdt.action.REWARD_VIDEO_DEMO" />
+337-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+338
+339            <intent-filter>
+339-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:316:13-320:29
+340                <action android:name="gdt.action.REWARD_VIDEO_DEMO" />
+340-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:317:17-71
+340-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:317:25-68
+341
+342                <category android:name="android.intent.category.DEFAULT" />
+342-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+342-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+343            </intent-filter>
+344        </activity>
+345        <activity
+345-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:322:9-342:20
+346            android:name="com.qq.e.union.demo.HybridADActivity"
+346-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:323:13-45
+347            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+347-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:326:13-83
+348            android:label="@string/title_hybrid"
+348-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:324:13-49
+349            android:screenOrientation="portrait"
+349-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:327:13-49
+350            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+350-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:325:13-72
+351            <meta-data
+351-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+352                android:name="id"
+352-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+353                android:value="@string/hybrid" />
+353-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+354            <meta-data
+354-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+355                android:name="content"
+355-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+356                android:value="hybrid广告接入示例" />
+356-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+357            <meta-data
+357-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+358                android:name="action"
+358-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+359                android:value="gdt.action.HYBRID_DEMO" />
+359-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+360
+361            <intent-filter>
+361-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:338:13-341:29
+362                <action android:name="gdt.action.HYBRID_DEMO" />
+362-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:339:17-65
+362-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:339:25-62
+363
+364                <category android:name="android.intent.category.DEFAULT" />
+364-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+364-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+365            </intent-filter>
+366        </activity>
+367        <activity
+367-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:343:9-362:20
+368            android:name="com.qq.e.union.demo.UnifiedBannerActivity"
+368-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:344:13-50
+369            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+369-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:345:13-83
+370            android:label="@string/title_activity_unified_banner"
+370-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:346:13-66
+371            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+371-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:347:13-72
+372            <meta-data
+372-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+373                android:name="id"
+373-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+374                android:value="@string/unified_banner" />
+374-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+375            <meta-data
+375-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+376                android:name="content"
+376-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+377                android:value="Banner2.0广告接入示例" />
+377-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+378            <meta-data
+378-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+379                android:name="action"
+379-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+380                android:value="gdt.action.UNIFIED_BANNER_DEMO" />
+380-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+381
+382            <intent-filter>
+382-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:358:13-361:29
+383                <action android:name="gdt.action.UNIFIED_BANNER_DEMO" />
+383-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:359:17-73
+383-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:359:25-70
+384
+385                <category android:name="android.intent.category.DEFAULT" />
+385-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+385-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+386            </intent-filter>
+387        </activity>
+388        <activity
+388-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:363:9-382:20
+389            android:name="com.qq.e.union.demo.UnifiedInterstitialADActivity"
+389-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:364:13-58
+390            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+390-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:365:13-83
+391            android:label="@string/title_activity_unified_interstitial_ad"
+391-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:366:13-75
+392            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+392-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:367:13-72
+393            <meta-data
+393-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:91:13-93:50
+394                android:name="id"
+394-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:92:17-34
+395                android:value="@string/unified_interstitial" />
+395-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:93:17-47
+396            <meta-data
+396-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:94:13-96:44
+397                android:name="content"
+397-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:95:17-39
+398                android:value="插屏2.0广告接入示例" />
+398-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:96:17-41
+399            <meta-data
+399-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:97:13-99:58
+400                android:name="action"
+400-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:98:17-38
+401                android:value="gdt.action.UNIFIED_INTERSTITIAL_DEMO" />
+401-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:99:17-55
+402
+403            <intent-filter>
+403-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:378:13-381:29
+404                <action android:name="gdt.action.UNIFIED_INTERSTITIAL_DEMO" />
+404-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:379:17-79
+404-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:379:25-76
+405
+406                <category android:name="android.intent.category.DEFAULT" />
+406-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:17-76
+406-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:65:27-73
+407            </intent-filter>
+408        </activity>
+409
+410        <!-- MTG激励视频所需的Activity，此处配置作用于流量分配功能，关于流量分配功能，详情请咨询商务 -->
+411        <activity
+411-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:385:9-388:74
+412            android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
+412-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:386:13-83
+413            android:configChanges="orientation|keyboardHidden|screenSize"
+413-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:387:13-74
+414            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+414-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:388:13-71
+415        <activity
+415-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:389:9-394:84
+416            android:name="com.mintegral.msdk.activity.MTGCommonActivity"
+416-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:390:13-73
+417            android:configChanges="keyboard|orientation"
+417-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:391:13-57
+418            android:exported="true"
+418-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:392:13-36
+419            android:screenOrientation="portrait"
+419-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:393:13-49
+420            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+420-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:394:13-72
+421        <!-- 国内流量版本必需，海外版本可以不添加 -->
+422        <receiver android:name="com.mintegral.msdk.click.AppReceiver" >
+422-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:396:9-401:20
+422-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:396:19-70
+423            <intent-filter>
+423-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:397:13-400:29
+424                <action android:name="android.intent.action.PACKAGE_ADDED" />
+424-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:398:17-78
+424-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:398:25-75
+425
+426                <data android:scheme="package" />
+426-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:399:17-50
+426-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:399:23-47
+427            </intent-filter>
+428        </receiver>
+429        <!-- 国内流量必需，海外版本可以不添加 -->
+430        <service android:name="com.mintegral.msdk.shell.MTGService" >
+430-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:403:9-407:19
+430-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:403:18-68
+431            <intent-filter>
+431-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:404:13-406:29
+432                <action android:name="com.mintegral.msdk.download.action" />
+432-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:405:17-77
+432-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:405:25-74
+433            </intent-filter>
+434        </service>
+435        <!-- 国内流量版本必需，海外版本可以不添加。 -->
+436        <provider
+437            android:name="com.mintegral.msdk.base.utils.MTGFileProvider"
+437-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:410:13-73
+438            android:authorities="com.qq.e.union.demo.mtgFileProvider"
+438-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:411:13-67
+439            android:exported="false"
+439-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:412:13-37
+440            android:grantUriPermissions="true" >
+440-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:413:13-47
+441            <meta-data
+441-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:44:13-46:57
+442                android:name="android.support.FILE_PROVIDER_PATHS"
+442-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:45:17-67
+443                android:resource="@xml/mtg_provider_paths" />
+443-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:46:17-54
+444        </provider>
+445        <!-- MTG所需的组件结束 -->
+446        <!-- 声明SDK所需要的组件 -->
+447        <service
+447-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:19:9-22:43
+448            android:name="com.qq.e.comm.DownloadService"
+448-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:20:13-57
+449            android:exported="false"
+449-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:21:13-37
+450            android:multiprocess="true" /> <!-- 请开发者注意字母的大小写，ADActivity，而不是AdActivity -->
+450-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:22:13-40
+451        <activity
+451-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:23:9-26:43
+452            android:name="com.qq.e.ads.ADActivity"
+452-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:24:13-51
+453            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+453-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:25:13-83
+454            android:multiprocess="true" />
+454-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:26:13-40
+455        <activity
+455-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:27:9-31:52
+456            android:name="com.qq.e.ads.PortraitADActivity"
+456-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:28:13-59
+457            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+457-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:29:13-83
+458            android:multiprocess="true"
+458-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:30:13-40
+459            android:screenOrientation="portrait" />
+459-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:31:13-49
+460        <activity
+460-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:32:9-36:53
+461            android:name="com.qq.e.ads.LandscapeADActivity"
+461-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:33:13-60
+462            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+462-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:34:13-83
+463            android:multiprocess="true"
+463-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:35:13-40
+464            android:screenOrientation="landscape" /> <!-- 用于激励视频可选广告的竖屏透明背景activity -->
+464-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:36:13-50
+465        <activity
+465-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:37:9-45:20
+466            android:name="com.qq.e.ads.RewardvideoPortraitADActivity"
+466-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:38:13-70
+467            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+467-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:39:13-83
+468            android:multiprocess="true"
+468-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:40:13-40
+469            android:theme="@android:style/Theme.Translucent" >
+469-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:41:13-61
+470            <meta-data
+470-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:42:13-44:40
+471                android:name="android.notch_support"
+471-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:43:17-53
+472                android:value="true" />
+472-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:44:17-37
+473        </activity> <!-- 用于激励视频可选广告的横屏透明背景activity -->
+474        <activity
+474-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:46:9-54:20
+475            android:name="com.qq.e.ads.RewardvideoLandscapeADActivity"
+475-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:47:13-71
+476            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+476-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:48:13-83
+477            android:multiprocess="true"
+477-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:49:13-40
+478            android:theme="@android:style/Theme.Translucent" >
+478-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:50:13-61
+479            <meta-data
+479-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:42:13-44:40
+480                android:name="android.notch_support"
+480-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:43:17-53
+481                android:value="true" />
+481-->[GDTSDK.tbsNormal.4.211.1081.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\303969053c5b7073fc4f4622349c910c\GDTSDK.tbsNormal.4.211.1081\AndroidManifest.xml:44:17-37
+482        </activity>
+483        <activity
+483-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:22:9-25:52
+484            android:name="com.kwad.sdk.page.KsAdWebViewActivity"
+484-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:23:13-65
+485            android:configChanges="keyboardHidden|orientation|screenSize"
+485-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:24:13-74
+486            android:screenOrientation="portrait" />
+486-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:25:13-49
+487        <activity
+487-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:26:9-30:80
+488            android:name="com.kwad.sdk.page.VideoWebViewActivity"
+488-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:27:13-66
+489            android:configChanges="keyboardHidden|orientation|screenSize"
+489-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:28:13-74
+490            android:screenOrientation="portrait"
+490-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:29:13-49
+491            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+491-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:30:13-77
+492        <activity
+492-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:31:9-35:80
+493            android:name="com.kwad.sdk.page.KsFullScreenVideoActivity"
+493-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:32:13-71
+494            android:configChanges="keyboardHidden|orientation|screenSize"
+494-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:33:13-74
+495            android:screenOrientation="portrait"
+495-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:34:13-49
+496            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+496-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:35:13-77
+497        <activity
+497-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:36:9-40:80
+498            android:name="com.kwad.sdk.page.KSRewardVideoActivity"
+498-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:37:13-67
+499            android:configChanges="keyboardHidden|orientation|screenSize"
+499-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:38:13-74
+500            android:screenOrientation="portrait"
+500-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:39:13-49
+501            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+501-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:40:13-77
+502
+503        <provider
+503-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:42:9-50:20
+504            android:name="com.kwad.sdk.widget.AdSdkFileProvider"
+504-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:43:13-65
+505            android:authorities="com.qq.e.union.demo.adFileProvider"
+505-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:44:13-66
+506            android:exported="false"
+506-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:45:13-37
+507            android:grantUriPermissions="true" >
+507-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:46:13-47
+508            <meta-data
+508-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:44:13-46:57
+509                android:name="android.support.FILE_PROVIDER_PATHS"
+509-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:45:17-67
+510                android:resource="@xml/ksad_file_paths" />
+510-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:46:17-54
+511        </provider> <!-- 下载相关 -->
+512        <receiver
+512-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:53:9-65:20
+513            android:name="com.ksad.download.DownloadReceiver"
+513-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:54:13-62
+514            android:exported="true" >
+514-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:55:13-36
+515            <intent-filter>
+515-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:56:13-58:29
+516                <action android:name="download.intent.action.DOWNLOAD_PAUSE" />
+516-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:57:17-80
+516-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:57:25-77
+517            </intent-filter>
+518            <intent-filter>
+518-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:59:13-61:29
+519                <action android:name="download.intent.action.DOWNLOAD_RESUME" />
+519-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:60:17-81
+519-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:60:25-78
+520            </intent-filter>
+521            <intent-filter>
+521-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:62:13-64:29
+522                <action android:name="download.intent.action.DOWNLOAD_CANCEL" />
+522-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:63:17-81
+522-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:63:25-78
+523            </intent-filter>
+524        </receiver>
+525
+526        <service android:name="com.kwai.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+526-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:67:9-113
+526-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:67:18-110
+527        <service
+527-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:68:9-70:49
+528            android:name="com.kwai.filedownloader.services.FileDownloadService$SeparateProcessService"
+528-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:69:13-103
+529            android:process=":filedownloader" />
+529-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:70:13-46
+530        <service
+530-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:71:9-73:40
+531            android:name="com.ksad.download.service.DownloadService"
+531-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:72:13-69
+532            android:exported="false" />
+532-->[ks_adsdk-2.2.4.aar] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\176b3ee537660e172b7dd302f534b4ab\ks_adsdk-2.2.4\AndroidManifest.xml:73:13-37
+533        <service
+533-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:27:9-30:45
+534            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+534-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:28:13-80
+535            android:enabled="false"
+535-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:29:13-36
+536            android:process=":leakcanary" />
+536-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:30:13-42
+537        <service
+537-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:31:9-34:45
+538            android:name="com.squareup.leakcanary.DisplayLeakService"
+538-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:32:13-70
+539            android:enabled="false"
+539-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:33:13-36
+540            android:process=":leakcanary" />
+540-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:34:13-42
+541
+542        <provider
+542-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:36:9-44:20
+543            android:name="com.squareup.leakcanary.internal.LeakCanaryFileProvider"
+543-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:37:13-83
+544            android:authorities="com.squareup.leakcanary.fileprovider.com.qq.e.union.demo"
+544-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:38:13-88
+545            android:exported="false"
+545-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:39:13-37
+546            android:grantUriPermissions="true" >
+546-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:40:13-47
+547            <meta-data
+547-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:44:13-46:57
+548                android:name="android.support.FILE_PROVIDER_PATHS"
+548-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:45:17-67
+549                android:resource="@xml/leak_canary_file_paths" />
+549-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:46:17-54
+550        </provider>
+551
+552        <activity
+552-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:46:9-59:20
+553            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+553-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:47:13-80
+554            android:enabled="false"
+554-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:48:13-36
+555            android:icon="@mipmap/leak_canary_icon"
+555-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:49:13-52
+556            android:label="@string/leak_canary_display_activity_label"
+556-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:50:13-71
+557            android:process=":leakcanary"
+557-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:51:13-42
+558            android:taskAffinity="com.squareup.leakcanary.com.qq.e.union.demo"
+558-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:52:13-76
+559            android:theme="@style/leak_canary_LeakCanary.Base" >
+559-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:53:13-63
+560            <intent-filter>
+560-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:77:13-80:29
+561                <action android:name="android.intent.action.MAIN" />
+561-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:78:17-69
+561-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:78:25-66
+562
+563                <category android:name="android.intent.category.LAUNCHER" />
+563-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:79:17-77
+563-->C:\Users\Administrator\Desktop\GDT_tbsNormal_Android_SDK_4.211.1081\Demo\src\main\AndroidManifest.xml:79:27-74
+564            </intent-filter>
+565        </activity>
+566        <activity
+566-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:60:9-69:68
+567            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+567-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:61:13-93
+568            android:enabled="false"
+568-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:62:13-36
+569            android:excludeFromRecents="true"
+569-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:63:13-46
+570            android:icon="@mipmap/leak_canary_icon"
+570-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:64:13-52
+571            android:label="@string/leak_canary_storage_permission_activity_label"
+571-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:65:13-82
+572            android:process=":leakcanary"
+572-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:66:13-42
+573            android:roundIcon="@mipmap/leak_canary_icon"
+573-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:67:13-57
+574            android:taskAffinity="com.squareup.leakcanary.com.qq.e.union.demo"
+574-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:68:13-76
+575            android:theme="@style/leak_canary_Theme.Transparent" />
+575-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\a02ae93dd4c9fcc7b8ee614111480daa\leakcanary-android-1.6.1\AndroidManifest.xml:69:13-65
+576    </application>
+577
+578</manifest>
